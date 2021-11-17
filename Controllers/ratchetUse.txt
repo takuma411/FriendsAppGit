@@ -1,0 +1,8 @@
+以降Ratchetを使いたいファイルにvendor/autoload.phpを読み込むように設定すればよい。
+
+
+require 'vendor/autoload.php';
+フォルダを分けたい場合は以下のマジカル定数などを利用し適宜変更
+require __DIR__ . '/vendor/autoload.php';
+
+https://kajindowsxp.com/ratchet-webchat/

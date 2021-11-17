@@ -1,0 +1,912 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+
+}
+/*レスポンシブ*/
+@media only screen and (max-width:600px) {
+  .manager_sign{
+    position: relative;
+    top: 20px; 
+    left: 5px;
+    font-size: 14px;
+    color: red;
+  }
+  .header-icon{
+    display: inline!important;
+  }
+  .container{
+    position: relative;
+    left: 55px;
+  }
+  .tpo_buttun1{
+    padding-bottom: 15px;
+  }
+  .typing-area input{
+    height: 45px;
+    width: 100%;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  .left_text{
+    font-size: 12px;
+  }
+  .right_text{
+    font-size: 12px;
+  }
+
+  
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: cornsilk;
+}
+.wrapper{
+background: #fff;
+width: 550px;
+height: auto;
+border-radius: 18px;
+box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+            0 32px 64px -48px rgba(0,0,0,0.3);
+}
+.wrapper img{
+    object-fit: cover;
+    /* border-radius: 80%; */
+    border-radius: 10px;
+}
+h2{
+  text-align: center;
+}
+.title{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(113, 206, 20);
+}
+/*ページング*/
+.paging{
+  width: 80%;
+  margin: 0 auto;
+}
+.paging a {
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+	text-decoration: none;
+}
+
+.click_profile{
+  width: 60px;
+  height: 60px;
+}
+  
+/*ボタン共通*/
+.field_input_pass{
+  position: relative;
+}
+.toggle-pass{
+  position: absolute;
+  top:70%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.toggle-pass_login{
+  position: absolute;
+  top:50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.toggle-repass{
+  position: absolute;
+  top:46%;
+  right: 17%;
+  transform: translateY(-50%);
+}
+
+.history_icon{
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.field_button{
+    padding-top: 10px;
+    text-align: center;
+}
+/*header*/
+header{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.header-icon{
+  display: flex;
+}
+.friends-icon{
+  padding-right: 5px;
+}
+/*footer*/
+.point-view{
+    margin: 0 auto;
+    padding-top: 30px;
+    
+}
+.point-p{
+    font-size:30px;
+    font-weight: 800;
+    color: red;
+}
+.gift-icon button{
+   width: 80px;
+   height: 50px;
+}
+.gift-icon{
+    padding-top: 30px;
+    margin-left: auto;
+    padding-right: 40px;
+}
+nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    width: 300px;
+    background: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: .5s;
+    z-index: 3;
+  }
+  .open nav {
+    left: 0;
+  }
+  nav .inner {
+    padding: 25px;
+  }
+  nav .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav .inner ul li {
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid #333;
+  }
+  nav .inner ul li a {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    padding: 1em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  nav .inner ul li a:hover {
+    background: #e4e4e4;
+  }
+  @media screen and (max-width: 767px) {
+    nav {
+      left: -240px;
+      width: 240px;
+    }
+  }
+  /*============
+  @keyframes
+  =============*/
+  @keyframes equalizer01 {
+    0% {
+      width: 70%;
+    }
+    10% {
+      width: 50%;
+    }
+    20% {
+      width: 100%;
+    }
+    30% {
+      width: 10%;
+    }
+    40% {
+      width: 50%;
+    }
+    50% {
+      width: 70%;
+    }
+    60% {
+      width: 50%;
+    }
+    70% {
+      width: 10%;
+    }
+    80% {
+      width: 100%;
+    }
+    90% {
+      width: 10%;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+  @keyframes equalizer02 {
+    0% {
+      width: 30%;
+    }
+    10% {
+      width: 20%;
+    }
+    20% {
+      width: 40%;
+    }
+    30% {
+      width: 10%;
+    }
+    40% {
+      width: 20%;
+    }
+    50% {
+      width: 30%;
+    }
+    60% {
+      width: 20%;
+    }
+    70% {
+      width: 10%;
+    }
+    80% {
+      width: 40%;
+    }
+    90% {
+      width: 10%;
+    }
+    100% {
+      width: 30%;
+    }
+  }
+  /*============
+  .toggle_btn
+  =============*/
+  .toggle_btn {
+    display: block;
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: 30px;
+    transform: translate(0, 0);
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .open .toggle_btn {
+    left: 330px;
+  }
+  .toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #666;
+    transition: all .5s;
+  }
+  .toggle_btn span:nth-child(1) {
+    top: 5px;
+    width: 60px;
+    animation: equalizer01 7000ms infinite;
+  }
+  .toggle_btn span:nth-child(2) {
+    top: 15px;
+    width: 30px;
+    animation: equalizer02 5000ms infinite;
+    animation-delay: 0.33s;
+  }
+  .toggle_btn span:nth-child(3) {
+    top: 25px;
+    width: 20px;
+    animation: equalizer02 5000ms infinite;
+  }
+  .open .toggle_btn span {
+    background-color: #fff;
+    width: 30px;
+  }
+  .open .toggle_btn span:nth-child(1) {
+    transform: translate(0, 10px) rotate(-45deg);
+    animation: unset;
+  }
+  .open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+    animation: unset;
+  }
+  .open .toggle_btn span:nth-child(3) {
+    transform: translate(0, -10px) rotate(45deg);
+    animation: unset;
+  }
+  @media screen and (max-width: 767px) {
+    .open .toggle_btn {
+      left: 260px;
+    }
+  }
+  /*============
+  #mask
+  =============*/
+  #mask {
+    display: none;
+  }
+  .open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .5s;
+  }
+/*ログインフォーム*/
+.form_login{
+    padding: 30px 30px;
+}
+.form_login .head a{
+    text-decoration: none;
+    color: rgb(30, 158, 30);
+}
+.form_login .head{
+    font-size: 35px;
+    font-weight: 600;
+    border-bottom: 1px solid #e6e6e6;
+
+}
+.form_login form{
+    margin: 20px 0;
+}
+.form_login form .field_input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+   
+
+}
+.form_login form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 10px;
+    border: 1px solid;
+    border-radius: 5px; 
+}
+.link{
+    margin: o auto;
+}
+.form_login .head{
+  display: flex;
+  align-items: center;
+  padding: 18px 30px; 
+}
+.form_login .head .back-icon{
+  font-size: 18px;
+  color: rgb(101, 190, 12);
+}
+.form_login .head .details span{
+  font-size: 20px;
+}
+.form_login .head img{
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+}
+/*チャット画面*/
+.users{
+    padding: 25px 30px;
+}
+.users .head,
+.user_a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+   
+}
+.users-list{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.chat-area .head{
+  border-bottom: 1px solid #e6e6e6;
+}
+.users .head .details{
+    margin-left: 15px;
+}
+.users .head .details span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.users .head .logout{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 7px 15px;
+    background: rgb(17, 194, 11);
+}
+.users .search{
+  padding-top: 20px;
+  padding-bottom: 20px;
+    margin: 20px 0;
+    margin-bottom: 0%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+.users .search input{
+    position: absolute;
+    height: 45px;
+    width: calc(80% - 50px);
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 13; 
+    outline: none;
+}
+.users .search button{
+    position: absolute;
+    right: 6%;
+    width: 47px;
+    height: 42px;
+    border: none;
+    background: rgb(17, 194, 11);
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+}
+.search-users{
+  padding-top: 20px;
+  padding-bottom: 20px;
+    margin: 20px 0;
+    margin-bottom: 0%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-users input{
+  position: absolute;
+  height: 45px;
+  width: calc(100% - 50px);
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 13; 
+  outline: none;
+}
+.search-users button{
+  position: absolute;
+  right: 0.5%;
+  width: 47px;
+  height: 42px;
+  border: none;
+  background: rgb(17, 194, 11);
+  font-size: 17px;
+  border-radius: 0 5px 5px 0;
+}
+.users .search select{
+    width: 70px;
+    height: 42px;
+    position: absolute;
+    right: 16%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 13; 
+    outline: none;
+ 
+} 
+.users-list a .content img{
+    height: 40px;
+    width: 40px;
+    
+}
+.content{
+    display: flex;
+}
+.details{
+    margin-left: 15px;
+}
+:is(.users, .users-list).content{
+    display: flex;
+    text-align: center;
+}
+.users-list a{
+    margin-bottom: 5px;
+    page-break-after: 1;
+    padding-right: 15px;
+}.users-list{
+    max-height: 450px;
+    overflow-y: auto;
+}
+:is(.users-list,.chat-box)::-webkit-scrollbar{
+    width: 0px;
+}
+.content{
+    padding-top: 15px;
+}
+
+/*チャット画面*/
+.chat-area .head{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px; 
+}
+.chat-area .head img{
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+}
+.chat-area .head .back-icon{
+    font-size: 18px;
+    color: rgb(101, 190, 12);
+}
+.chat-area .head span{
+    font-size: 17px;
+    font-weight: 600;
+}
+.chat-box{
+    height: 500px;
+    background: rgba(244, 245, 247, 0.871);
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+                inset 0 -32px 32px -32px rgb(0 0 0 /5%);
+    overflow-y: auto;
+}
+.chat-box .chat-outgoing{
+    display: flex;
+    word-wrap: break-word;
+
+}
+.chat-outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 150px);
+}
+.chat-outgoing .details p{
+    background: #333;
+    color: #fff;
+    border-radius: 18px 18px 0 18px ;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.chat-box .chat-incoming .icon_img{
+    height: 35px;
+    width: 35px;
+}
+.incoming_img img{
+  height: 35px;
+    width: 35px;
+}
+.chat-box .chat-incoming .msg_img{
+  height: 200px;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.chat-box .chat-incoming{
+    display: flex;
+    align-items:flex-end;
+    word-wrap: break-word;
+}
+.chat-incoming .details p{
+    background:rgb(238, 223, 223);
+    color: black;
+    border-radius: 18px 18px 18px 0 ;
+    padding-left: 5px;
+    padding-right: 10px;
+
+}
+.chat-incoming .details {
+    display: flex;
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 150px);
+}
+.incoming_msg{
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+.outgoing_msg{
+  padding-bottom: 10px;
+}
+.chat-area .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.typing-area input{
+    height: 45px;
+    width: 89%;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.typing-area button{
+    width: 55px;
+    border: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    color: rgb(101, 190, 12);
+    cursor: pointer;
+    background: #333;
+}
+
+/*manager-page*/
+.manager_sign{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+.border{
+    border-top: 1px solid #e6e6e6;
+    margin-top: 5px;
+}
+.manager-top{
+    padding-top: 40px;
+}
+.register-click{
+    font-size: 40px;
+    color: white;
+    background: #cd201f;
+    border-radius: 30px;
+    width: 200px;
+    height: 160px;
+}
+.search-click{
+    font-size: 40px;
+    color: white;
+    background: #4285f4;
+    border-radius: 30px;
+    width: 200px;
+    height: 160px;
+}
+.conp{
+    padding-top: 15px;
+    text-align: center;
+}
+.con_register{
+    padding-top: 25px;
+}
+.container{
+    padding-top: 25px;
+}
+/*myprofile*/
+.profile_img{
+  width: 45px;
+  height: 45px;
+}
+.field_input textarea{
+    resize: none;
+}
+.field_button-pro{
+  padding-top: 10px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.input_side{
+  padding-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.profile_head{
+ text-align: center;
+ font-size: larger;
+ font-weight: 800;
+}
+.three_input{
+  display: flex;
+}
+.three_input .field_input {
+  margin-right: 5px;
+}
+.field_file{
+  display: inline-block;
+}
+/*change_pass*/
+.container .field_button{
+  padding-bottom: 15px;
+}
+/*ショップページ*/
+.shop_table{
+  width: 80%;
+  margin: 0 auto;
+  border-collapse:collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.shop_table th,tr,td{
+  border: solid 1px;
+}
+.shop_table th {
+  background:rgb(142, 224, 9);
+  border: none;
+}
+.shop_table td {
+background: #eee;
+}
+.shop_table tr:nth-child(odd) td {
+background: #fff;
+}
+/*エラー*/
+.err_text{
+  font-size: 14px;
+  color: #cd201f;
+}
+/*成功*/
+.suc_text{
+  font-size: 14px;
+  color: #1725e6;
+  
+}
+/*確認画面*/
+.conf{
+  padding-top: 10px;
+  height: auto;
+  text-align: center;
+}
+.conf_text{
+  padding-bottom: 15px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.result{
+  display: flex;
+  font-size: 20px;
+}
+.right_text{
+  font-weight: 900;
+}
+.buttum{
+  display: flex;
+  justify-content:space-around;
+}
+.yes{
+  width: 80px;
+  height: 50px;
+}
+.back{
+  width: 80px;
+  height: 50px;
+}
+/*相手のプロフィール*/
+.all_detail{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  background: rgb(147, 204, 226);
+  border-radius: 10px;
+}
+.profile_font{
+ font-size: 18px;
+}
+.middle{
+  display: flex;
+  justify-content: space-around;
+}
+/*search_manager*/
+.search_bar{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.name_field{
+  border-radius: 1px;
+  width: 150px;
+}
+.center{
+  text-align: center;
+}
+/* friends_profile */
+.f_profile_head{
+  font-size: 14px;
+  padding-right: 30px;
+}
+.f_field_input{
+  display: flex;
+  border-bottom: 1px solid #e6e6e6; ;
+}
+.friends_profile{
+  height: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.profile_left{
+  text-align: left;
+}
+.form_send{
+  display: flex;
+}
+.img_send button{
+  width: 32px;
+  height:53px;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  color: rgb(20, 20, 17);
+  cursor: pointer;
+  background-color: rgb(25, 194, 47); 
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+/*写真選択 */
+.filelabel {
+  background-color: rgb(25, 194, 47);  /* 背景色 */
+  color: white;              /* 文字色 */
+  border: 2px solid orange;  /* 枠線 */
+  border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;   /* 角丸 */
+  padding: 12px 9px;         /* 内側の余白 */
+  display: inline-block;     /* インラインブロック化 */
+}
+.filelabel img {
+  vertical-align: bottom;    /* 画像の垂直方向の配置 */
+}
+.filelabel:hover {
+  opacity: 0.5;              /* 半透明 */
+  border: 2px solid red;     /* 枠線(赤色) */
+  cursor: pointer;           /* マウス形状(ポインタ) */
+}
+#filesend {
+  display: none;  /* 本来のファイル選択フォームは非表示に */
+}
+.up_form{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.gift_button{
+  width: 60px;
+  height: 50px;
+}
+.confirm_gift{
+  text-decoration: none;
+}
+.stock_gift{
+  font-size: 14px;
+
+}
+.gift_point_color{
+  color: #cd201f;
+}
+.err_text{
+  text-align: center;
+  font-weight: 600;
+}
+.confirm_buy{
+  text-align: center;
+}
+.confirm_buy{
+  text-align: center;
+}
+.outgoing_msg img{
+  width: 300px;
+  height: 200px;
+}
+.incoming_msg_img img{
+  width: 200px;
+  height: 300px;
+}
